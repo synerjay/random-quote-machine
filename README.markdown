@@ -1,4 +1,4 @@
-Random Quote Generatorusing React JavaScript framework.
+Random Quote Generator using React JavaScript framework.
 
 A frontend app that randomly shows a quote with a user's click. 
 
