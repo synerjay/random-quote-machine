@@ -13,19 +13,25 @@ code {
 }
 
 .App {
+  --url: url('https://source.unsplash.com/random');
+
   min-height: 100vh;
-  background-color: #682c0e;
+  background: var(--url) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.QuoteBox {
-  background-color: #f9e0ae;
-  padding: 5px;
-  border-radius: 5px;
-  width: 60vw;
-  max-width: 50rem;
-  padding: 3rem;
-  box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.5);
+  .QuoteBox {
+    background-color: #f9e0ae;
+    padding: 5px;
+    border-radius: 5px;
+    width: 60vw;
+    max-width: 50rem;
+    padding: 3rem;
+    box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.5);
+  }
 }
