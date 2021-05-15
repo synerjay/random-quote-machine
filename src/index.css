@@ -12,11 +12,22 @@ code {
     monospace;
 }
 
-.wrapper {
-  height: 100vh;
+.App {
+  min-height: 100vh;
   background-color: #682c0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.QuoteBox {
+  background-color: #f9e0ae;
+  padding: 5px;
+  border-radius: 5px;
+  width: 60vw;
+  max-width: 50rem;
+  padding: 3rem;
 }
 
 .box {
-  background-color: #f9e0ae;
 }
