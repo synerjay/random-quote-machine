@@ -1,10 +1,13 @@
-import { Fragment, useEffect } from 'react';
+import { Fragment, useEffect, useState } from 'react';
+import { random } from 'lodash';
 
 const quotesURL =
   'https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json';
 
 const QuoteBox = () => {
   // useState hook
+  const [quote, setQuote] = useState('');
+  const [author, setAuthor] = useState('');
 
   // Use Effect Hook to fetch API at first render
   useEffect(() => {
@@ -17,24 +20,30 @@ const QuoteBox = () => {
     fetch(quotesURL)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        const quotes = data.quotes;
+        // Lodash random method
+        const randomNum = random(0, quotes.length);
+
+        setQuote(quotes[randomNum].quote);
+        setAuthor(quotes[randomNum].author);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        setAuthor('Jerome Tolentino');
+        setQuote(
+          'There is something wrong with the random quote machine. Try again later!'
+        );
+      });
   };
 
   return (
     <Fragment>
       <div className='QuoteBox'>
-        <i class='fas fa-quote-left'></i>
-        <p id='text'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius unde
-          expedita deleniti consequuntur explicabo aut? Quod saepe adipisci,
-          porro, facere a delectus laboriosam atque perspiciatis architecto
-          necessitatibus, maiores quis repellendus.
-        </p>
-        <p id='author'> - Somebody</p>
+        <i className='fas fa-quote-left'></i>
+        <p id='text'>{quote}</p>
+        <p id='author'> - {author}</p>
         <br />
-        <div class='d-grid gap-4 d-md-flex justify-content-around'>
+        <div className='d-grid gap-4 d-md-flex justify-content-around'>
           {/* <button className="btn btn-primary me-md-2" id="new-quote" onClick={this.generate}>
               New Quote
             </button> */}
