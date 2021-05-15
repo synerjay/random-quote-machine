@@ -16,7 +16,6 @@ const QuoteBox = ({ refreshPage }) => {
 
   const generateNewQuote = () => {
     refreshPage();
-    fetchRandomQuote();
   };
 
   // Fetch randomQuote RestAPI
