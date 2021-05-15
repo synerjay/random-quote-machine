@@ -14,6 +14,10 @@ const QuoteBox = () => {
     fetchRandomQuote();
   }, []);
 
+  const generateNewQuote = () => {
+    fetchRandomQuote();
+  };
+
   // Fetch randomQuote RestAPI
 
   const fetchRandomQuote = () => {
@@ -40,13 +44,13 @@ const QuoteBox = () => {
     <Fragment>
       <div className='QuoteBox'>
         <i className='fas fa-quote-left'></i>
-        <p id='text'>{quote}</p>
+        <h2 id='text'>{quote}</h2>
         <p id='author'> - {author}</p>
         <br />
         <div className='d-grid gap-4 d-md-flex justify-content-around'>
-          {/* <button className="btn btn-primary me-md-2" id="new-quote" onClick={this.generate}>
-              New Quote
-            </button> */}
+          <button className='NewQuoteButton' onClick={generateNewQuote}>
+            New Quote
+          </button>
           <a
             className='btn btn-secondary'
             target='_top'

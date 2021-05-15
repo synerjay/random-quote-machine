@@ -27,4 +27,5 @@ code {
   width: 60vw;
   max-width: 50rem;
   padding: 3rem;
+  box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.5);
 }
