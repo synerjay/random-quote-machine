@@ -9,6 +9,10 @@ function App() {
 
   const bgArray = [
     ["url('https://source.unsplash.com/1600x900/?nature,water')"],
+    ["url('https://source.unsplash.com/1600x900/?children,play')"],
+    ["url('https://source.unsplash.com/1600x900/?success')"],
+    ["url('https://source.unsplash.com/1600x900/?suits')"],
+    ["url('https://source.unsplash.com/1600x900/?city')"],
     ["url('https://source.unsplash.com/1600x900/?people')"],
     ["url('https://source.unsplash.com/1600x900/?fitness')"],
     ["url('https://source.unsplash.com/1600x900/?storm')"],
@@ -24,24 +28,22 @@ function App() {
     ["url('https://source.unsplash.com/1600x900/?construction')"],
     ["url('https://source.unsplash.com/1600x900/?building')"],
     ["url('https://source.unsplash.com/1600x900/?growth')"],
+    ["url('https://source.unsplash.com/1600x900/?ocean')"],
+    ["url('https://source.unsplash.com/1600x900/?river')"],
   ];
 
   const style = {
     '--url': bgUrl,
   };
 
-  const forceChangeState = () => {
+  const changeBg = () => {
     const randomNum = random(0, bgArray.length);
     setbgUrl(bgArray[randomNum]);
   };
 
-  function refreshPage() {
-    window.location.reload(false);
-  }
-
   return (
     <div className='App' style={style}>
-      <QuoteBox refreshPage={forceChangeState} />
+      <QuoteBox changeBg={changeBg} />
     </div>
   );
 }
