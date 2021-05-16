@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useState } from 'react';
 import { random } from 'lodash';
+import Text from './Text';
 
 const quotesURL =
   'https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json';
@@ -44,11 +45,10 @@ const QuoteBox = ({ changeBg }) => {
   return (
     <Fragment>
       <div className='QuoteBox'>
-        <i className='fas fa-quote-left'></i>
-        <h2 id='text'>{quote}</h2>
-        <p id='author'> - {author}</p>
+        <Text quote={quote} />
+        <p className='Author'> - {author}</p>
         <br />
-        <div className='d-grid gap-4 d-md-flex justify-content-around'>
+        <div>
           <button className='NewQuoteButton' onClick={generateNewQuote}>
             New Quote
           </button>
@@ -58,7 +58,8 @@ const QuoteBox = ({ changeBg }) => {
             id='tweet-quote'
             // href={tweetURL}
           >
-            <i className='fab fa-twitter'></i> Share
+            {' '}
+            Share
           </a>
         </div>
       </div>
