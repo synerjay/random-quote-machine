@@ -3,8 +3,7 @@ import { FaQuoteLeft } from 'react-icons/fa';
 const Text = ({ quote }) => {
   return (
     <p className='Text'>
-      <FaQuoteLeft />
-      {quote}
+      <FaQuoteLeft /> {quote}
     </p>
   );
 };

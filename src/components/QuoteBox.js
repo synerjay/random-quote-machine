@@ -3,6 +3,7 @@ import { random } from 'lodash';
 import Text from './Text';
 import Author from './Author';
 import Links from './Links';
+import Button from './Button';
 
 const quotesURL =
   'https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json';
@@ -51,9 +52,7 @@ const QuoteBox = ({ changeBg }) => {
         <Author author={author} />
         <div className='BottomRow'>
           <Links quote={quote} author={author} />
-          <button className='NewQuoteButton' onClick={generateNewQuote}>
-            New Quote
-          </button>
+          <Button onClick={generateNewQuote} />
         </div>
       </div>
     </Fragment>
