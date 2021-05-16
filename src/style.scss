@@ -1,10 +1,9 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #682c0e;
 }
 
 code {
@@ -16,6 +15,7 @@ code {
   --url: url('https://source.unsplash.com/random');
 
   min-height: 100vh;
+  background-color: #682c0e;
   background: var(--url) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
