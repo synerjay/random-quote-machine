@@ -4,3 +4,7 @@ One of my side projects using React. Background changes dynamically when a new q
 
 See a live demo here:
 https://synerjay.github.io/random-quote-machine/
+
+# Technologies Used
+- React
+- SASS
