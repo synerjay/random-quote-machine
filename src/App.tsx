@@ -37,7 +37,7 @@ function App() {
     '--url': bgUrl,
   };
 
-  const changeBg = () => {
+  const changeBg = (): void => {
     const randomNum = random(0, bgArray.length);
     setbgUrl(bgArray[randomNum]);
   };
