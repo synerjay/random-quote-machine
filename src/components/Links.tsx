@@ -1,7 +1,13 @@
 import React from 'react';
 import { FaTwitter } from 'react-icons/fa';
 
-function Link({ children, ...props }) {
+interface LinkProps {
+  children: React.ReactChild;
+  href: string;
+  id: string;
+}
+
+function Link({ children, ...props }: LinkProps) {
   return (
     <a {...props} className='Link' target='_blank' rel='noopener noreferrer'>
       {children}
@@ -9,8 +15,8 @@ function Link({ children, ...props }) {
   );
 }
 
-function Links({ quote, author }) {
-  const twitterLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+function Links({ quote, author }: { quote: string; author: string }) {
+  const twitterLink: string = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
     `"${quote}" - ${author}`
   )}&hashtags=quotes`;
 

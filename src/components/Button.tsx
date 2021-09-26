@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Button({ onClick }) {
+function Button({ onClick }: { onClick(): void }) {
   return (
     <button className='NewQuoteButton' onClick={onClick}>
       {' '}

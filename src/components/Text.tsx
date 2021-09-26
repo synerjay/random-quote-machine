@@ -1,6 +1,6 @@
 import { FaQuoteLeft } from 'react-icons/fa';
 
-const Text = ({ quote }) => {
+const Text = ({ quote }: { quote: string }) => {
   return (
     <p className='Text'>
       <FaQuoteLeft /> {quote}
